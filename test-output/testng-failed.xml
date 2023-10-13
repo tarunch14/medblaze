@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Audits_list]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.medblaze.utilities.Reporting"/>
+  </listeners>
+  <test thread-count="2" parallel="tests" name="Audits Functionality testing one(failed)">
+    <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="com.medblaze.qualitymanagement.audits.tests.functionalitytesting.FunctionalityTestingTestCasesExecution">
+        <methods>
+          <include name="fieldsTestingofTextfield"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="LogintoApplication"/>
+        </methods>
+      </class> <!-- com.medblaze.qualitymanagement.audits.tests.functionalitytesting.FunctionalityTestingTestCasesExecution -->
+    </classes>
+  </test> <!-- Audits Functionality testing one(failed) -->
+  <test thread-count="2" parallel="tests" name="Audits Functionality testing two(failed)">
+    <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="com.medblaze.qualitymanagement.audits.tests.functionalitytesting.FunctionalityTestingTestCasesExecution">
+        <methods>
+          <include name="fieldsAvaialabilityinConfiguration"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="inputTestingofTextfield"/>
+          <include name="LogintoApplication"/>
+        </methods>
+      </class> <!-- com.medblaze.qualitymanagement.audits.tests.functionalitytesting.FunctionalityTestingTestCasesExecution -->
+    </classes>
+  </test> <!-- Audits Functionality testing two(failed) -->
+</suite> <!-- Failed suite [Audits_list] -->

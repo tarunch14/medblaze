@@ -1,0 +1,36 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Audits_list" parallel="tests" thread-count="2" >
+	
+	<listeners>
+		<listener class-name="com.medblaze.utilities.Reporting"></listener>
+	</listeners>
+	
+  
+   <test name="Audits Functionality testing one" >
+	   
+	<parameter name="browser" value="Firefox"></parameter>
+				<classes>
+					<class name="com.medblaze.qualitymanagement.audits.tests.functionalitytesting.FunctionalityTestingTestCasesExecution">
+						<methods>
+							<include name="LogintoApplication" />
+							<include name="fieldsTestingofTextfield" />
+						</methods>
+					</class>
+				</classes>
+			</test>
+			
+	<test name="Audits Functionality testing two">
+		<parameter name="browser" value="Firefox"></parameter>
+		<classes>
+			<class name="com.medblaze.qualitymanagement.audits.tests.functionalitytesting.FunctionalityTestingTestCasesExecution">
+				<methods>
+					<include name="LogintoApplication" />
+					<include name="fieldsAvaialabilityinConfiguration" />
+					<include name="inputTestingofTextfield" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+			
+	
+</suite>

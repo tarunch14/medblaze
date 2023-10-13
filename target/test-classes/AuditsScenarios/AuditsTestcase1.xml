@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Audits_list" verbose="1" >
+	
+	<listeners>
+		<listener class-name="com.medblaze.utilities.Reporting"></listener>
+	</listeners>
+  
+   <test name="Audits Test00" >
+	   
+	<parameter name="browser" value="Firefox"></parameter>
+				<classes>
+					<class name="com.medblaze.qualitymanagement.audits.tests.TestCasesExecution">
+						<methods>
+							<include name="LogintoApplication" />
+							<include name="textFieldTestingtwo" />
+						</methods>
+					</class>
+				</classes>
+			</test>
+</suite>
